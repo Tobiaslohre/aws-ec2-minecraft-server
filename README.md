@@ -7,7 +7,7 @@ Self-hosted Minecraft server deployed on AWS EC2 (Ubuntu), configured manually v
 Self-hosted Minecraft server deployed on AWS EC2 using Ubuntu and PaperMC. The project demonstrates cloud infrastructure setup, Linux administration, and server troubleshooting.
 
 ## Architecture
-![AWS Architecture](/docs/architecture.png)
+![AWS Architecture](architecture.png)
 
 ## Tech Stack
 - AWS EC2
