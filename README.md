@@ -64,6 +64,12 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 
 The EC2 infrastructure and server environment were successfully configured and tested. PaperMC was installed and tested, with additional debugging performed around Java compatibility and world initialization issues.
 
+## Security Note
+
+During initial testing, inbound access was opened broadly using `0.0.0.0/0` to make setup and connection testing easier.
+
+In a production environment, SSH access on port `22` should be restricted to a trusted IP address, while the Minecraft port `25565` can be opened publicly if the server is intended to be accessible by players.
+
 ## Future Improvements
 
 - Add automated startup using `systemd`
