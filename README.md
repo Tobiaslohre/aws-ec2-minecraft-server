@@ -10,35 +10,6 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 
 ## Architecture
 
-## Architecture
-
-## Architecture
-
-```mermaid
-graph LR
-
-    Player[Player / Minecraft Client] --> Internet[Internet]
-    Admin[Admin PC / SSH Client] -. SSH Administration .-> SG
-
-    Internet --> PublicIP[EC2 Public IPv4]
-
-    subgraph AWS[AWS Cloud]
-        subgraph Network[Default VPC / Public Network]
-            SG[Security Group<br>TCP 25565 - Minecraft<br>TCP 22 - SSH]
-            EC2[EC2 Instance<br>Ubuntu Server]
-            Java[Java Runtime<br>OpenJDK / Temurin Java]
-            Server[Minecraft / PaperMC<br>Server Files]
-            Storage[Local Server Files<br>world, logs, server.properties]
-        end
-    end
-
-    PublicIP --> SG
-    SG --> EC2
-    EC2 --> Java
-    Java --> Server
-    Server --> Storage
-```
-
 ![AWS Architecture](./architecture.png)
 
 ## System Flow
