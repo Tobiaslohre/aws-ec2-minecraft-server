@@ -12,6 +12,8 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 
 ## Architecture
 
+## Architecture
+
 ```mermaid
 graph LR
 
