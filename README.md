@@ -1,37 +1,73 @@
-# aws-ec2-minecraft-server
-Self-hosted Minecraft server deployed on AWS EC2 (Ubuntu), configured manually via SSH using PaperMC and Java. Demonstrates hands-on experience with cloud infrastructure, Linux system administration, networking (security groups), and debugging in a real AWS environment.
+# AWS EC2 Minecraft Server
 
-# Cloud Game Server (AWS EC2 + PaperMC)
+Self-hosted Minecraft server environment deployed on AWS EC2 using Ubuntu, configured manually via SSH using Java and PaperMC. This project demonstrates hands-on experience with cloud infrastructure, Linux system administration, networking through AWS Security Groups, and server troubleshooting in a real AWS environment.
 
 ## Overview
-Self-hosted Minecraft server deployed on AWS EC2 using Ubuntu and PaperMC. The project demonstrates cloud infrastructure setup, Linux administration, and server troubleshooting.
+
+This project documents the process of deploying and configuring a Minecraft server environment on an AWS EC2 instance running Ubuntu Linux.
+
+The goal was to gain practical experience with cloud infrastructure, Linux server administration, Java runtime management, and debugging production-like server issues.
 
 ## Architecture
-![AWS Architecture](architecture.png)
+
+![AWS Architecture](./architecture.png)
+
+## System Flow
+
+1. A player connects to the server using the EC2 public IPv4 address.
+2. AWS Security Groups control inbound traffic to the instance.
+3. Minecraft traffic is allowed through TCP port `25565`.
+4. SSH administration is handled through TCP port `22`.
+5. The EC2 instance runs Ubuntu Server and hosts the Minecraft/PaperMC server environment.
+6. Server files, logs, and world data are stored locally on the instance.
 
 ## Tech Stack
+
 - AWS EC2
 - Ubuntu Server
-- Java (OpenJDK)
-- PaperMC Minecraft Server
-- SSH / CLI administration
+- Java / OpenJDK
+- PaperMC
+- Minecraft Java Edition
+- SSH / Linux CLI
+- AWS Security Groups
 
 ## Setup Process
-- Provisioned EC2 instance on AWS
-- Configured security groups for SSH and Minecraft traffic
-- Installed and configured Java runtime
-- Deployed PaperMC server manually via SSH
-- Configured server settings and EULA
-- Debugged Java compatibility issues and runtime errors
+
+- Provisioned an EC2 instance on AWS
+- Connected to the instance remotely using SSH
+- Configured AWS Security Groups for SSH and Minecraft traffic
+- Installed and managed Java runtime versions
+- Downloaded and tested Minecraft/PaperMC server builds
+- Configured server settings and accepted the Minecraft EULA
+- Started and managed the server through the Linux terminal
+- Debugged runtime issues using server logs and CLI output
 
 ## Challenges Solved
-- Java version mismatch between OpenJDK releases
-- Server startup failures due to incompatible runtime
+
+- Java version mismatch between OpenJDK 17, 21, and 25
+- PaperMC startup failures caused by unsupported Java runtime versions
+- Incorrect Java version being selected by the system
+- Minecraft/PaperMC server startup issues
 - AWS networking configuration for public access
-- Debugging server logs via Linux CLI
+- Debugging server logs directly from the Linux CLI
 
 ## Key Learnings
-- AWS EC2 provisioning and networking basics
-- Linux server administration
-- Java runtime management
-- Debugging production-like server environments
+
+- AWS EC2 provisioning and basic cloud networking
+- Linux server administration through SSH
+- Security Group configuration for public services
+- Java runtime management on Linux
+- Troubleshooting server applications in a production-like environment
+- Importance of clear documentation and architecture diagrams
+
+## Current Status
+
+The EC2 infrastructure and server environment were successfully configured and tested. PaperMC was installed and tested, with additional debugging performed around Java compatibility and world initialization issues.
+
+## Future Improvements
+
+- Add automated startup using `systemd`
+- Add automated backups
+- Add monitoring for CPU, memory, and server status
+- Containerize the server using Docker
+- Rebuild the infrastructure using Terraform
