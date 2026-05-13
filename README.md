@@ -41,6 +41,12 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 - Configured server settings and accepted the Minecraft EULA
 - Started and managed the server through the Linux terminal
 - Debugged runtime issues using server logs and CLI output
+- 
+## Security Note
+
+During initial testing, inbound access was opened broadly using `0.0.0.0/0` to make setup and connection testing easier.
+
+In a production environment, SSH access on port `22` should be restricted to a trusted IP address, while the Minecraft port `25565` can be opened publicly if the server is intended to be accessible by players.
 
 ## Challenges Solved
 
@@ -64,13 +70,9 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 
 The EC2 infrastructure and server environment were successfully configured and tested. PaperMC was installed and tested, with additional debugging performed around Java compatibility and world initialization issues.
 
-## Security Note
-
-During initial testing, inbound access was opened broadly using `0.0.0.0/0` to make setup and connection testing easier.
-
-In a production environment, SSH access on port `22` should be restricted to a trusted IP address, while the Minecraft port `25565` can be opened publicly if the server is intended to be accessible by players.
-
 ## Screenshots
+
+The screenshots below show the EC2 instance, Security Group configuration, and a successful Minecraft client connection to the server.
 
 ### EC2 Instance Running
 ![EC2 Instance Running](./screenshots/ec2-instance-running.png)
