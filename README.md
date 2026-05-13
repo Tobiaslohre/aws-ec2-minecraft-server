@@ -70,6 +70,17 @@ During initial testing, inbound access was opened broadly using `0.0.0.0/0` to m
 
 In a production environment, SSH access on port `22` should be restricted to a trusted IP address, while the Minecraft port `25565` can be opened publicly if the server is intended to be accessible by players.
 
+## Screenshots
+
+### EC2 Instance Running
+![EC2 Instance Running](./screenshots/ec2-instance-running.png)
+
+### Security Group Rules
+![Security Group Rules](./screenshots/security-group-rules.png)
+
+### Minecraft Client Connected
+![Minecraft Client Connected](./screenshots/minecraft-client-connected.png)
+
 ## Future Improvements
 
 - Add automated startup using `systemd`
