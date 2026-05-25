@@ -41,7 +41,7 @@ The goal was to gain practical experience with cloud infrastructure, Linux serve
 - Configured server settings and accepted the Minecraft EULA
 - Started and managed the server through the Linux terminal
 - Debugged runtime issues using server logs and CLI output
-- 
+  
 ## Security Note
 
 During initial testing, inbound access was opened broadly using `0.0.0.0/0` to make setup and connection testing easier.
